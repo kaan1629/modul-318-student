@@ -16,5 +16,7 @@
         Task<Connections> GetConnectionsAsync(string fromStation, string toStation);
 
         Connections GetConnections(string fromStation, string toStation);
+
+        Connections GetConnections(object startStationInput, object endStationInput);
     }
 }
