@@ -51,6 +51,7 @@
             this.Button_Suchen = new System.Windows.Forms.Button();
             this.label_suchfeld_start = new System.Windows.Forms.Label();
             this.PanelAbfahrtstafel = new System.Windows.Forms.Panel();
+            this.ListSuggestionsStation = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TextStation = new System.Windows.Forms.TextBox();
             this.DataGridViewStationBoard = new System.Windows.Forms.DataGridView();
@@ -59,7 +60,6 @@
             this.PanelKarte = new System.Windows.Forms.Panel();
             this.PanelAdresse = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.ListSuggestionsStation = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelVerbindung.SuspendLayout();
@@ -153,9 +153,9 @@
             this.PanelVerbindung.Controls.Add(this.label3);
             this.PanelVerbindung.Controls.Add(this.Button_Suchen);
             this.PanelVerbindung.Controls.Add(this.label_suchfeld_start);
-            this.PanelVerbindung.Location = new System.Drawing.Point(902, 84);
+            this.PanelVerbindung.Location = new System.Drawing.Point(4, 72);
             this.PanelVerbindung.Name = "PanelVerbindung";
-            this.PanelVerbindung.Size = new System.Drawing.Size(194, 80);
+            this.PanelVerbindung.Size = new System.Drawing.Size(945, 545);
             this.PanelVerbindung.TabIndex = 18;
             // 
             // ListSuggestionsEnde
@@ -299,10 +299,22 @@
             this.PanelAbfahrtstafel.Controls.Add(this.DataGridViewStationBoard);
             this.PanelAbfahrtstafel.Controls.Add(this.ButtonAnzeigen);
             this.PanelAbfahrtstafel.Controls.Add(this.label1);
-            this.PanelAbfahrtstafel.Location = new System.Drawing.Point(4, 66);
+            this.PanelAbfahrtstafel.Location = new System.Drawing.Point(985, 487);
             this.PanelAbfahrtstafel.Name = "PanelAbfahrtstafel";
-            this.PanelAbfahrtstafel.Size = new System.Drawing.Size(889, 539);
+            this.PanelAbfahrtstafel.Size = new System.Drawing.Size(56, 35);
             this.PanelAbfahrtstafel.TabIndex = 19;
+            // 
+            // ListSuggestionsStation
+            // 
+            this.ListSuggestionsStation.FormattingEnabled = true;
+            this.ListSuggestionsStation.ItemHeight = 20;
+            this.ListSuggestionsStation.Location = new System.Drawing.Point(293, 138);
+            this.ListSuggestionsStation.Name = "ListSuggestionsStation";
+            this.ListSuggestionsStation.Size = new System.Drawing.Size(125, 104);
+            this.ListSuggestionsStation.TabIndex = 31;
+            this.ListSuggestionsStation.Visible = false;
+            this.ListSuggestionsStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListSuggestionsStation_MouseClick);
+            this.ListSuggestionsStation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextStation_KeyPress);
             // 
             // label6
             // 
@@ -321,6 +333,7 @@
             this.TextStation.Name = "TextStation";
             this.TextStation.Size = new System.Drawing.Size(125, 27);
             this.TextStation.TabIndex = 29;
+            this.TextStation.TextChanged += new System.EventHandler(this.TextStation_TextChanged);
             // 
             // DataGridViewStationBoard
             // 
@@ -377,15 +390,6 @@
             this.label5.Size = new System.Drawing.Size(118, 37);
             this.label5.TabIndex = 0;
             this.label5.Text = "Adresse";
-            // 
-            // ListSuggestionsStation
-            // 
-            this.ListSuggestionsStation.FormattingEnabled = true;
-            this.ListSuggestionsStation.ItemHeight = 20;
-            this.ListSuggestionsStation.Location = new System.Drawing.Point(293, 138);
-            this.ListSuggestionsStation.Name = "ListSuggestionsStation";
-            this.ListSuggestionsStation.Size = new System.Drawing.Size(125, 104);
-            this.ListSuggestionsStation.TabIndex = 31;
             // 
             // Form1
             // 
