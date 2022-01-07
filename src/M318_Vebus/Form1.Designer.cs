@@ -155,7 +155,7 @@
             this.PanelVerbindung.Controls.Add(this.label_suchfeld_start);
             this.PanelVerbindung.Location = new System.Drawing.Point(4, 72);
             this.PanelVerbindung.Name = "PanelVerbindung";
-            this.PanelVerbindung.Size = new System.Drawing.Size(904, 531);
+            this.PanelVerbindung.Size = new System.Drawing.Size(975, 531);
             this.PanelVerbindung.TabIndex = 18;
             // 
             // ListSuggestionsEnde
