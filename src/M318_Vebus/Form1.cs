@@ -75,7 +75,6 @@ namespace M318_Vebus
         {
         }
 
-        // Panel Navigation
         private void NavButtonVerbindungSuchen_Click(object sender, EventArgs e)
         {
             this.resizePanel.OpenClose(this.PanelVerbindung, this.PanelAbfahrtstafel, this.PanelKarte, this.PanelAdresse);
@@ -91,7 +90,6 @@ namespace M318_Vebus
             this.resizePanel.OpenClose(this.PanelAbfahrtstafel, this.PanelAdresse, this.PanelKarte, this.PanelVerbindung);
         }
 
-        // Verbindung Suchen
         private void Button_Suchen_Click_1(object sender, EventArgs e)
         {
             // Records Idee von Mustafa Kara/ Michael Estermann
@@ -118,9 +116,6 @@ namespace M318_Vebus
             }
         }
 
-        // Suchassistent
-
-        // Suchfeld Start Verbindung
         private void TextStart_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.TextStart.Text))
@@ -162,7 +157,6 @@ namespace M318_Vebus
             }
         }
 
-        // Suchfeld Ende Verbindung
         private void TextEnde_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.TextEnde.Text))
@@ -204,7 +198,6 @@ namespace M318_Vebus
             }
         }
 
-        // Suchfeld Station Abfahrtstafel
         private void TextStation_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.TextStation.Text))
@@ -246,7 +239,6 @@ namespace M318_Vebus
             }
         }
 
-        // Abfahrtstafel
         private void ButtonAnzeigen_Click_1(object sender, EventArgs e)
         {
             try
