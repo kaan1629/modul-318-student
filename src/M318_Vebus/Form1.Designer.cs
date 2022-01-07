@@ -153,7 +153,7 @@
             this.PanelVerbindung.Controls.Add(this.label3);
             this.PanelVerbindung.Controls.Add(this.Button_Suchen);
             this.PanelVerbindung.Controls.Add(this.label_suchfeld_start);
-            this.PanelVerbindung.Location = new System.Drawing.Point(4, 72);
+            this.PanelVerbindung.Location = new System.Drawing.Point(4, 75);
             this.PanelVerbindung.Name = "PanelVerbindung";
             this.PanelVerbindung.Size = new System.Drawing.Size(975, 531);
             this.PanelVerbindung.TabIndex = 18;
