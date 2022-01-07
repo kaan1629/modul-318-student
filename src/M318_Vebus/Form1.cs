@@ -33,17 +33,38 @@ namespace M318_Vebus
 
         private void TextEnde_LostFocus(object? sender, EventArgs e)
         {
-            this.ListSuggestionsEnde.Visible = false;
+            if (this.ListSuggestionsEnde.Focused)
+            {
+                this.ListSuggestionsEnde.Visible = true;
+            }
+            else
+            {
+                this.ListSuggestionsEnde.Visible = false;
+            }
         }
 
         private void TextStation_LostFocus(object? sender, EventArgs e)
         {
-            this.ListSuggestionsStation.Visible = false;
+            if (this.ListSuggestionsStation.Focused)
+            {
+                this.ListSuggestionsStation.Visible = true;
+            }
+            else
+            {
+                this.ListSuggestionsEnde.Visible = false;
+            }
         }
 
         private void TextStart_LostFocus(object? sender, EventArgs e)
         {
-            this.ListSuggestions.Visible = false;
+            if (this.ListSuggestions.Focused)
+            {
+                this.ListSuggestions.Visible = true;
+            }
+            else
+            {
+                this.ListSuggestions.Visible = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,7 +107,7 @@ namespace M318_Vebus
                     .ToList();
                 BindingList<ConnectionRecord>? List = new BindingList<ConnectionRecord>(values);
                 this.DataGridViewVerbindung.DataSource = List;
-                if(values == null || values.Count == 0)
+                if (values == null || values.Count == 0)
                 {
                     MessageBox.Show("Es wurden keine verbindungen gefunden. Bitte vesuchen Sie es nochmal.", "Error - Keine Verbindung");
                 }
@@ -205,7 +226,7 @@ namespace M318_Vebus
 
         private void ListSuggestionsStation_MouseClick(object sender, MouseEventArgs e)
         {
-            for (var index = 0; index < this.ListSuggestions.Items.Count; index++)
+            for (var index = 0; index < this.ListSuggestionsStation.Items.Count; index++)
             {
                 if (this.ListSuggestionsStation.GetItemRectangle(index).Contains(e.Location))
                 {
@@ -213,7 +234,7 @@ namespace M318_Vebus
                 }
             }
 
-            this.ListSuggestions.Visible = false;
+            this.ListSuggestionsStation.Visible = false;
         }
 
         private void TextStation_KeyPress(object sender, KeyPressEventArgs e)

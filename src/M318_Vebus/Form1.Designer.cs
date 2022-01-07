@@ -155,7 +155,7 @@
             this.PanelVerbindung.Controls.Add(this.label_suchfeld_start);
             this.PanelVerbindung.Location = new System.Drawing.Point(4, 72);
             this.PanelVerbindung.Name = "PanelVerbindung";
-            this.PanelVerbindung.Size = new System.Drawing.Size(945, 545);
+            this.PanelVerbindung.Size = new System.Drawing.Size(904, 531);
             this.PanelVerbindung.TabIndex = 18;
             // 
             // ListSuggestionsEnde
@@ -178,6 +178,7 @@
             this.ListSuggestions.Size = new System.Drawing.Size(151, 104);
             this.ListSuggestions.TabIndex = 31;
             this.ListSuggestions.Visible = false;
+            this.ListSuggestions.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListSuggestions_MouseClick);
             // 
             // label2
             // 
@@ -299,9 +300,9 @@
             this.PanelAbfahrtstafel.Controls.Add(this.DataGridViewStationBoard);
             this.PanelAbfahrtstafel.Controls.Add(this.ButtonAnzeigen);
             this.PanelAbfahrtstafel.Controls.Add(this.label1);
-            this.PanelAbfahrtstafel.Location = new System.Drawing.Point(985, 487);
+            this.PanelAbfahrtstafel.Location = new System.Drawing.Point(985, 473);
             this.PanelAbfahrtstafel.Name = "PanelAbfahrtstafel";
-            this.PanelAbfahrtstafel.Size = new System.Drawing.Size(56, 35);
+            this.PanelAbfahrtstafel.Size = new System.Drawing.Size(56, 32);
             this.PanelAbfahrtstafel.TabIndex = 19;
             // 
             // ListSuggestionsStation
