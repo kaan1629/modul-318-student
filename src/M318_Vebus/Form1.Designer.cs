@@ -321,6 +321,7 @@
             this.TextStation.Name = "TextStation";
             this.TextStation.Size = new System.Drawing.Size(125, 27);
             this.TextStation.TabIndex = 29;
+            this.TextStation.TextChanged += new System.EventHandler(this.TextStation_TextChanged);
             // 
             // DataGridViewStationBoard
             // 
@@ -386,6 +387,9 @@
             this.ListSuggestionsStation.Name = "ListSuggestionsStation";
             this.ListSuggestionsStation.Size = new System.Drawing.Size(125, 104);
             this.ListSuggestionsStation.TabIndex = 31;
+            this.ListSuggestionsStation.Visible = false;
+            this.ListSuggestionsStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListSuggestionsStation_MouseClick);
+            this.ListSuggestionsStation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextStation_KeyPress);
             // 
             // Form1
             // 

@@ -25,13 +25,20 @@ namespace M318_Vebus
             this.InitializeComponent();
             this.ListSuggestions.DataSource = this.suggestionsStart;
             this.ListSuggestionsEnde.DataSource = this.suggestionsEnde;
+            this.ListSuggestionsStation.DataSource = this.suggestionsStation;
             this.TextStart.LostFocus += this.TextStart_LostFocus;
             this.TextEnde.LostFocus += this.TextEnde_LostFocus;
+            this.TextStation.LostFocus += this.TextStation_LostFocus;
         }
 
         private void TextEnde_LostFocus(object? sender, EventArgs e)
         {
             this.ListSuggestionsEnde.Visible = false;
+        }
+
+        private void TextStation_LostFocus(object? sender, EventArgs e)
+        {
+            this.ListSuggestionsStation.Visible = false;
         }
 
         private void TextStart_LostFocus(object? sender, EventArgs e)
